@@ -1,0 +1,49 @@
+{
+    "name": "Telegram Cloud Uploads Manager Bot",
+    "description": "A Telegram Cloud Uploads Manager Bot by @trtechguide",
+    "keywords": [
+        "telegram",
+        "cloud",
+        "upload",
+        "manager",
+        "bot"
+    ],
+    "repository": "https://github.com/TR-TECH-GUIDE/Cloud-Up-Manager",
+    "website": "https://trtechguide.wordpress.com",
+    "success_url": "https://t.me/trtechguide",
+    "env": {
+        "API_ID": {
+            "description": "Get this value from my.telegram.org"
+        },
+        "API_HASH": {
+            "description": "Get this value from my.telegram.org"
+        },
+        "BOT_TOKEN": {
+            "description": "Get this from @BotFather"
+        },
+        "STREAMTAPE_API_USERNAME": {
+            "description": "Streamtape API Username. Get this from https://streamtape.com/accpanel#collapseThree"
+        },
+        "STREAMTAPE_API_PASS": {
+            "description": "Streamtape API Password. Get this from https://streamtape.com/accpanel#collapseThree"
+        },
+        "BOT_OWNER": {
+            "description": "Bot Owner UserID",
+            "required": false
+        },
+        "LOG_CHANNEL": {
+            "description": "Logs Channel ID for some Tracking XD. Example: -100123456789"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
